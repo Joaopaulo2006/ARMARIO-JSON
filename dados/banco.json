@@ -1,0 +1,21 @@
+{
+    "estado": [
+        {
+        "Estado": "Livre",
+        "cor": "rgb(114, 15, 15)"
+        },
+        {
+        "Estado": "Ocupado",
+        "cor": "rgb(145, 143, 143)"
+        },
+        {
+        "Estado": "Manutenção",
+        "cor": "rgb(196, 0, 0)"
+        },
+        {
+        "Estado": "Desocupado",
+        "cor": "rgb(60, 161, 2)"
+        }
+    ]
+
+}
