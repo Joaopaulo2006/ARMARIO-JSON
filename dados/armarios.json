@@ -1,0 +1,7 @@
+{
+  "Armas": [{ 
+    "estados": ["Desocupado", "Ocupado", "Manutenção"]
+  }
+  ]
+}
+   
