@@ -1,57 +1,40 @@
-// const Armarios = './dados/armarios.json';
+const Armarios = './dados/armarios.json';
 
-// function estado(This) {
-//   fetch(Armarios)
-//     .then(response => response.json())
-//     .then(data => {
+function estado(This) {
+    fetch(Armarios)
+        .then(response => response.json())
+        .then(data => {
+            const arms = data.Armas;
+            var content = This.previousElementSibling;
+            arms.forEach(arma => {
+                const estados = arma.estados;
+                const D = estados.find(estado => estado === 'Desocupado');
+                const O = estados.find(estado => estado === 'Ocupado');
+                const M = estados.find(estado => estado === 'Manutenção');
+                const CD = estados.find(estado => estado === 'corD');
+                const CO = estados.find(estado => estado === 'rgb(145, 143, 143)');
+                const CM = estados.find(estado => estado === 'corM');
+                if (content.textContent === "Desocupado" && D) {
+                    content.textContent = O;
+                    content.style.backgroundColor = CO;
+                }
+                else if (content.textContent === "Ocupado" && O) {
+                    content.textContent = M;
+                }
+                else {
+                    content.textContent = D;
+                }
+            });
+        })
+}
+function carregarNumero() {
+    var ids = "Nº";
+    ids += document.querySelector('.id');
+    for(i = 0; i < ids.length; i++) {
+        ids = ids + i;
+    }
+    
+}
 
-//       const arms = data.Armas;
-//       var content = This.previousElementSibling;
-      
-//       arms.forEach(arma => {
-//         const estado = arma.estados;
-//         const D = arm.estado.find(arma => arma.estados === 'Desocupado');
-//         const O = arm.estado.find(arma => arma.estados === 'Ocupado');
-//         const M = arm.estado.find(arma => arma.estados === 'Manutenção');
-
-//         if (content.textContent === "Desocupado") {
-//           console.log(O);
-//         }
-//         else if (content.textContent === "Ocupado") {
-//           console.log(M);
-//         }
-//         else {
-//           console.log(D);
-//         }
-//       });
-//     })
-
-
-// }
-/-----------------/
-// const Armarios = './dados/armarios.json';
-// function estado(This) {
-//   fetch(Armarios)
-//     .then(response => response.json())
-//     .then(data => {
-
-//       const arms = data.Armas;
-//       var content = This.previousElementSibling;
-      
-//       arms.forEach(arma => {
-//         const estado = arma.estados;
-  
-//         if (content === "Desocupado" && estado === "Desocupado") {
-//           console.log(arma);
-//         }
-//         else if (content === "Ocupado" && estado === "Ocupado") {
-//           console.log(arma);
-//         }
-//         else if (content === "Manutenção" && estado === "Manutenção") {
-//           console.log(arma);
-//         }
-//       });
-//     })
-
-
-// }
+// Chamar a função ao carregar a página
+window.addEventListener('load', carregarNumero);
