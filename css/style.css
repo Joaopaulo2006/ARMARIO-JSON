@@ -22,7 +22,7 @@ body {
   margin-left: 120px;
   margin-bottom: -90px;
 }
-#estd {
+.nms {
   background-color: rgba(39, 39, 39, 0.432);
   margin-left: 12px;
   margin-right: 20px;
@@ -75,7 +75,7 @@ body {
   background-color: rgba(0, 0, 0, 0.664);
   border-radius: 10px;
 }
-.bloco1 {
+.bloco1, .bloco2 {
   text-align: center;
   font-size: xx-large;
   margin-bottom: 20px;
@@ -85,17 +85,7 @@ body {
   margin-right: 180px;
   border-radius: 10px;
 }
-.bloco2 {
-  margin-bottom: 5px;
-  text-align: center;
-  font-size: xx-large;
-  margin-left: 180px;
-  margin-right: 180px;
-  background-color: gray;
-  padding-right: 12px;
-  margin-top: 5px;
-  border-radius: 10px;
-}
+
 #texto {
   text-align: center;
   
