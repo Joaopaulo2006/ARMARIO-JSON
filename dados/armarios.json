@@ -1,0 +1,18 @@
+{
+  "Armas": [
+    {
+      "estados": [ 
+        "Desocupado",
+        "Ocupado",
+        "Manutenção"
+      ],
+      "cor": [
+        "rgb(60, 161, 2)",
+        "rgb(145, 143, 143)",
+        "rgb(196, 0, 0)"
+      ],
+      "numeros": 1
+    
+    }
+  ]
+}

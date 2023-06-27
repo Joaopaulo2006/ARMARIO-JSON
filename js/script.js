@@ -37,6 +37,16 @@ window.onload = function nums() {
                 idmnts.textContent = `Nº${Idarm.toString().padStart(3, '0')}`;
                 Idarm++;
             });
+            arms.forEach(arma => {
+               
+                const estados = arma.estados;
+                const D = estados.find(estado => estado === 'Desocupado');
+               
+                var elmnt = document.getElementsByClassName("nms");
+                for(let i = 0; i < elmnt.length; i++) {
+                    elmnt[i].innerHTML = D; 
+                }
+            });
         }
         )
 }
