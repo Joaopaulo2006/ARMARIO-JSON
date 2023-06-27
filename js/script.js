@@ -8,9 +8,9 @@ function estado(This) {
             arms.forEach(arma => {
                 const cores = arma.cor;
                 const estados = arma.estados;
-                const D = estados.find(estado => estado === 'Desocupado');
-                const O = estados.find(estado => estado === 'Ocupado');
-                const M = estados.find(estado => estado === 'Manutenção');
+                const D = estados.find(estados => estados === 'Desocupado');
+                const O = estados.find(estados => estados === 'Ocupado');
+                const M = estados.find(estados => estados === 'Manutenção');
                 if (content.textContent === "Desocupado" && D) {
                     content.textContent = O;
                     content.style.backgroundColor = cores[1];
@@ -25,6 +25,9 @@ function estado(This) {
                 }
             });
         })
+        .catch(error => {
+            console.log("Erro ao fazer a requisição ou fazer parsing do JSON: " + error);
+          });
 }
 window.onload = function nums() {
     fetch(Armarios)
@@ -38,15 +41,15 @@ window.onload = function nums() {
                 Idarm++;
             });
             arms.forEach(arma => {
-               
                 const estados = arma.estados;
                 const D = estados.find(estado => estado === 'Desocupado');
-               
                 var elmnt = document.getElementsByClassName("nms");
-                for(let i = 0; i < elmnt.length; i++) {
+                for(let i=0; i<elmnt.length; i++) {
                     elmnt[i].innerHTML = D; 
                 }
             });
-        }
-        )
+        })
+        .catch(error => {
+            console.log("Erro ao fazer a requisição ou fazer parsing do JSON: " + error);
+          });
 }
