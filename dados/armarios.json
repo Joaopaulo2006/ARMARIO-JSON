@@ -1,25 +1,18 @@
 {
   "Armas": [
     {
-      "estados": [
+      "estados": [ 
         "Desocupado",
         "Ocupado",
         "Manutenção"
       ],
-      "CorEstds": [
-        {
-          "corD": "rgb(60, 161, 2)"
-        },
-        {
-          "corO": "rgb(145, 143, 143)"
-        },
-        {
-          "corM": "rgb(196, 0, 0)"
-        }
+      "cor": [
+        "rgb(60, 161, 2)",
+        "rgb(145, 143, 143)",
+        "rgb(196, 0, 0)"
       ],
-      "Id's": [
-        {"numeros": 0}
-      ]
+      "numeros": 1
+    
     }
   ]
 }
